@@ -27,6 +27,7 @@ import org.springframework.util.PatternMatchUtils;
 
 /**
  * Pointcut bean for simple method name matches, as an alternative to regexp patterns.
+ *
  * <p>Does not handle overloaded methods: all methods with a given name will be eligible.
  *
  * @author Juergen Hoeller
@@ -65,7 +66,7 @@ public class NameMatchMethodPointcut extends StaticMethodMatcherPointcut impleme
 	 * before a proxy is used.
 	 * <p><b>NB:</b> This method does not work after the proxy is in
 	 * use, as advice chains will be cached.
-	 * @param name name of the additional method that will match
+	 * @param name the name of the additional method that will match
 	 * @return this pointcut to allow for multiple additions in one line
 	 */
 	public NameMatchMethodPointcut addMethodName(String name) {
